@@ -8,8 +8,12 @@
 	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 
-    <bean id="helloService" class="com.cs.tiny.HelloServiceImpl">
+    <bean id="propertyService" class="com.cs.tiny.PropertyServiceImpl">
+    </bean>
 
+    <bean id="helloService" class="com.cs.tiny.HelloServiceImpl">
+        <property name="text" value="basic text"/>
+        <property name="propertyService" ref="propertyService"/>
     </bean>
 
 </beans>
