@@ -62,12 +62,12 @@ public class XmlTest {
         // 1.初始化beanfactory
         AbstractBeanFactory beanFactory = new AutowireCapableBeanFactory();
 
-// 2.注入bean
+        // 2.注入bean
         BeanDefinition beanDefinition = new BeanDefinition();
         beanDefinition.setBeanClassName("com.cs.tiny.HelloServiceImpl");
         beanFactory.registerBeanDefinition("helloService", beanDefinition);
 
-// 3.获取bean
+        // 3.获取bean
         HelloService helloService = (HelloService) beanFactory.getBean("helloService");
         helloService.hello();
     }
